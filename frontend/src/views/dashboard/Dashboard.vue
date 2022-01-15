@@ -1,31 +1,20 @@
 <template>
-<v-content>
-  <v-row>
-      <v-col
-        col="12"
-        md="4"
-      >
+  <v-main app style="padding: 0px">
+    <v-row>
+      <v-col col="12" md="4">
         <Welcome></Welcome>
       </v-col>
-  </v-row>
-  <v-row>
-  
-    <v-col
-      cols="12"
-      md="8"
-    >
-      <OSdist></OSdist>
-    </v-col>
+    </v-row>
+    <v-row>
+      <v-col cols="12" md="8">
+        <OSdist></OSdist>
+      </v-col>
 
-    <v-col
-      cols="12"
-      sm="6"
-      md="4"
-    >
-      <Domaingroup></Domaingroup>
-    </v-col>
-  </v-row>
-  </v-content>
+      <v-col cols="12" sm="6" md="4">
+        <Domaingroup></Domaingroup>
+      </v-col>
+    </v-row>
+  </v-main>
 </template>
 
 <script>
@@ -39,6 +28,5 @@ export default {
     OSdist,
     Domaingroup,
   },
-  
 }
 </script>

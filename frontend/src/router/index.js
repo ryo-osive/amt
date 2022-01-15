@@ -19,34 +19,31 @@ const routes = [
     component: () => import('@/views/alerts/alerts.vue'),
   },
   {
-    path: '/assets',
-    name: 'assets',
-    component: () => import('@/views/assets/assets.vue'),
+    path: '/net-utils',
+    name: 'NetworkUtils',
+    component: () => import('@/views/net-utils/NetworkUtils.vue'),
+    children: [
+      {
+        path: 'portscan',
+        name: 'PortScanner',
+        component: () => import('@/views/portscan.vue'),
+      },
+    ],
   },
-
   {
-    path: '/pages/login',
-    name: 'pages-login',
+    path: '/assetsDashboard',
+    name: 'AssetsDashboard',
+    component: () => import('@/views/AssetManagement/AssetsDashboard.vue'),
+  },
+  {
+    path: '/login',
+    name: 'login',
     component: () => import('@/views/pages/Login.vue'),
-    meta: {
-      layout: 'blank',
-    },
-  },
-  {
-    path: '/portscan',
-    name: 'pages-portscan',
-    component: () => import('@/views/portscan.vue'),
-    meta: {
-      layout: 'blank01',
-    },
   },
   {
     path: '/error-404',
     name: 'error-404',
     component: () => import('@/views/Error.vue'),
-    meta: {
-      layout: 'blank',
-    },
   },
   {
     path: '*',

@@ -1,6 +1,5 @@
 <template>
   <v-row>
-
     <v-col >
       <v-card>
         <v-card-title>Port scan</v-card-title>

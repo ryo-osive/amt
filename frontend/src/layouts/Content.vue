@@ -1,20 +1,11 @@
 <template>
   <v-app>
     <vertical-nav-menu :is-drawer-open.sync="isDrawerOpen"></vertical-nav-menu>
-
-    <v-app-bar
-      app
-      flat
-      absolute
-      color="transparent"
-    >
+    <v-app-bar app flat absolute color="transparent">
       <div class="boxed-container w-full">
         <div class="d-flex align-center mx-6">
           <!-- Left Content -->
-          <v-app-bar-nav-icon
-            class="d-block d-lg-none me-2"
-            @click="isDrawerOpen = !isDrawerOpen"
-          ></v-app-bar-nav-icon>
+          <v-app-bar-nav-icon class="d-block d-lg-none me-2" @click="isDrawerOpen = !isDrawerOpen"></v-app-bar-nav-icon>
           <v-text-field
             rounded
             dense
@@ -27,17 +18,13 @@
           <v-spacer></v-spacer>
 
           <!-- Right Content -->
-          <a
-            href=""
-            target="_blank"
-            rel="nofollow"
-          >
+          <a href="" target="_blank" rel="nofollow">
             <v-icon class="ms-6 me-4">
               {{ icons.mdiGithub }}
             </v-icon>
           </a>
           <theme-switcher></theme-switcher>
-          
+
           <app-bar-user-menu></app-bar-user-menu>
         </div>
       </div>
@@ -49,16 +36,7 @@
       </div>
     </v-main>
 
-    <v-footer
-      app
-      inset
-      color="transparent"
-      absolute
-      height="56"
-      class="px-0"
-    >
-    
-    </v-footer>
+    <v-footer app inset color="transparent" absolute height="56" class="px-0"> </v-footer>
   </v-app>
 </template>
 
